@@ -9,6 +9,12 @@
 
       body{
         background-image: url("trainstation.jpg");
+        overflow: none;
+        position:fixed;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
       }
 
       #railImage{
@@ -22,14 +28,14 @@
 
 
       @keyframes sbahnAnimation {
-        0% {transform: translate(1370px, -600px); width: 50px; opacity: .0;}
+        0% {transform: translate(1370px, -400px); width: 50px; opacity: .2;}
         20% {transform: translate(1402px, -900px); width: 100px; opacity: .5;}
         100% {transform: translate(200px, -100px); width: 200px; opacity: 1;}
       }
 
       .sbahnAnimate {
         animation-name: sbahnAnimation;
-        animation-duration: 10s;
+        animation-duration: 4s;
         animation-fill-mode: forwards;
         animation-direction: alternate;
         animation-iteration-count: 1;
@@ -38,21 +44,22 @@
       #sbahn{
         width: width: 50px;
         height: auto;
+        position: fixed;
       }
 
-      @keyframes ubahnAnimation {
+/*      @keyframes ubahnAnimation {
         0% {transform: translate(200px, -100px); width: 300px; opacity: 0;}
         20% {transform: translate(1200px, -800px); width: 150px; opacity: .2 ;}
         100% {transform: translate(0px, -700px); width: 100px; opacity: 1;}
-      }
+      }*/
 
-      .ubahnAnimate {
+/*      .ubahnAnimate {
         animation-name: ubahnAnimation;
         animation-duration: 10s;
         animation-fill-mode: forwards;
         animation-direction: alternate;
         animation-iteration-count: 1;
-      }
+      }*/
 
 
 
@@ -70,7 +77,21 @@
 
     <div class="images">
       <img id="sbahn" class="sbahnAnimate" src="sbahn.png">
-      <img id="ubahn" class="ubahnAnimate" src="ubahn.png">
+      <!-- <img id="ubahn" class="ubahnAnimate" src="ubahn.png"> -->
     </div>
+
+    <script>
+      function addImage() {
+        var d = document.querySelector('.images');
+        var i = document.createElement('img');
+        i.classList.add('sbahnAnimate');
+        i.src = 'sbahn.png';
+        i.id = 'sbahn';
+        d.appendChild(i);
+      }
+
+      document.getElementById('railImage').onclick = addImage;
+      
+    </script>
   </body>
 </html>
