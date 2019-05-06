@@ -10,6 +10,7 @@
 
 			#everything{
 				position: fixed;
+				width: 100%;
 			}
 
 			#content{
@@ -27,11 +28,10 @@
 			 	position: absolute;
 			 	width: 100px;
 			 	height: 100px;
-  				margin-left: 700px;
-  				margin-right: auto;
-  				margin-bottom: auto;
-  				padding-top: 250px;
+  				margin: 0 auto;
+  				padding-top: 252px;
   				padding-left: 65px;
+  				left: 41.8%;
 			 	transform-style: preserve-3d;
 			 	transition-property: transform;
 			 	animation: spin 3s 1s infinite ;
@@ -218,12 +218,14 @@
 			let shape = document.querySelector('.sphereClass');
 
 			let animation = [
-			{right: '-370px', bottom: '225px'},
-			{right: '200px', bottom: '100px'},
-			{right: '100px', bottom: '300px'},
-			{right: '0px', bottom: '100px'},
-			{right: '-600px', bottom: '220px'},
-			{right: '-370px', bottom: '225px'}
+			{left: '41.8%', bottom: '225px'},
+			{left: '9%', bottom: '80px'},
+			// {right: '4000px', bottom: '-200px'},
+			// {right: '0px', bottom: '100px'},
+			// {right: '600px', bottom: '220px'},
+			{left: '41.8%', bottom: '225px'},
+			{left: '41.8%', bottom: '-200px'},
+			{left: '41.8%', bottom: '225px'}
 			];
 
 			let animationTime = {duration: 8000, iterations: 1};
