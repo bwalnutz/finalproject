@@ -4,11 +4,17 @@
 		<title>Final Project - Image 3</title>
 		<meta charset="utf-8">
 		<style>
+			body{
+				margin: 0;
+			}
+
+			#everything{
+				position: fixed;
+			}
 
 			#content{
-				width: 1536px;
-				height: 864px;
-			 	border: 3px solid black;
+				width: 100%;
+				height: 100%;
   				display: block;
   				margin-left: auto;
   				margin-right: auto;
@@ -24,9 +30,12 @@
   				margin-left: 700px;
   				margin-right: auto;
   				margin-bottom: auto;
-  				padding-top: 242px;
+  				padding-top: 250px;
+  				padding-left: 65px;
 			 	transform-style: preserve-3d;
-			 	animation: spin 10s 2s infinite;
+			 	transition-property: transform;
+			 	animation: spin 3s 1s infinite ;
+			 	
 			 	
 
 			 }
@@ -50,19 +59,31 @@
 	
 			 }
 
+
+
 			 img{
 			 	mix-blend-mode: multiply;
+			 	width: 100%;
+			 	height: 100%;
+			 	object-fit: cover;
+			 	margin: 0;
+			 	z-index: 0;
 			 	
 			 }
-			 /*@keyframes spin{
-			 	0%{transform: rotateX(0deg);
-			 		transform: rotateY(0deg);
-			 		
-			 	}
-			 	100%{transform: rotateX(360deg);
+
+			 #tvball{
+			 	mix-blend-mode: color-burn;
+
+			 }
+			 @keyframes spin{
+			 	from {transform: translateX(0px);
+			 		transform: rotateY(0deg);}
+
+			 	to{transform: translateX(300px);
 			 		transform: rotateY(360deg);}
-			 		
-			 }*/
+
+	
+			 }
 
 
 			 /*user interactivity*/
@@ -74,12 +95,7 @@
 
 			 }
 
-			 #sphere:hover{
-			 	transform: rotateZ(150deg);
-			 	transform: rotateX(180deg);
-			 	transfrom: rotateY(90deg);
-
-			 }
+		
 
 
 			 .circle{
@@ -155,6 +171,8 @@
 			
 	</head>
 	<body>
+
+
 	<div id="everything">
 		<div id="content">
 			<img id="image" src="tvtower.jpg">
@@ -165,27 +183,60 @@
 		
 
 
-		<div id="sphere">
+		<div id="sphere" class="sphereClass">
 
-			<div class="circle"><video src="breakfast.mp4" autoplay muted loop></video></div>
-			<div class="circle"><video src="breakfast.mp4" autoplay muted loop></video></div>
-			<div class="circle"><video src="breakfast.mp4" autoplay muted loop></video></div>
-			<div class="circle"><video src="breakfast.mp4" autoplay muted loop></video></div>
-			<div class="circle"><video src="breakfast.mp4" autoplay muted loop></video></div>
-			<div class="circle"><video src="breakfast.mp4" autoplay muted loop></video></div>
-			<div class="circle"><video src="breakfast.mp4" autoplay muted loop></video></div>
-			<div class="circle"><video src="breakfast.mp4" autoplay muted loop></video></div>
-			<div class="circle"><video src="breakfast.mp4" autoplay muted loop></video></div>
-			<div class="circle"><video src="breakfast.mp4" autoplay muted loop></video></div>
-			<div class="circle"><video src="breakfast.mp4" autoplay muted loop></video></div>
-			<div class="circle"><video src="breakfast.mp4" autoplay muted loop></video></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
 
 
 		</div>
 
 		<video id="video2" src="breakfast.mp4" autoplay muted loop></video>
+		
+
+		<audio autoplay loop>
+			<source src="candlelight.mp3" type="audio/mpeg">
+		</audio>
+
+
 
 	</div>
+
+	<script>
+
+		function clickAnimate(){
+			let shape = document.querySelector('.sphereClass');
+
+			let animation = [
+			{right: '-370px', bottom: '225px'},
+			{right: '200px', bottom: '100px'},
+			{right: '100px', bottom: '300px'},
+			{right: '0px', bottom: '100px'},
+			{right: '-600px', bottom: '220px'},
+			{right: '-370px', bottom: '225px'}
+			];
+
+			let animationTime = {duration: 8000, iterations: 1};
+
+			let move = shape.animate(
+				animation,
+				animationTime)
+		}
+
+		document.getElementById('sphere').onclick = clickAnimate;
+
+
+	</script>
 	
 
 
