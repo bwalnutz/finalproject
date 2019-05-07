@@ -165,6 +165,10 @@
 				background-color: #ff9e9e;
 			}
 
+			#dropdownMenu{
+				position: absolute;
+			}
+
 
 
 		</style>
@@ -174,10 +178,23 @@
 
 
 	<div id="everything">
+
 		<div id="content">
 			<img id="image" src="tvtower.jpg">
+
+
 			
 		</div>
+
+					<form id="dropdownMenu">
+				<select class="options" name="select-drawing" onchange="location =this.value;">
+					<option value="">Select Image</option>
+					<option value="Benzi_Edelson_Drawing_Final.html">Drawing 1</a>
+					<option value="yuh.html">Drawing 2</a>
+					<option value="image3.html">Drawing 3</a>
+				</select>
+			</form>
+	
 
 
 		
@@ -210,6 +227,8 @@
 
 
 
+
+
 	</div>
 
 	<script>
@@ -239,7 +258,8 @@
 
 
 	</script>
-	
+
+
 
 
 

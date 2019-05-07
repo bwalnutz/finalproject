@@ -102,26 +102,25 @@
 		<h3>By Benzi Edelson</h3>
 
 			<div class="row">
-				<div class="column" id="column1"><a href="Benzi_Edelson_Drawing_Final.html"><p>Drawing 1</p>
-					<a href="Benzi_Edelson_Drawing_Final.html">
+				<div class="column" id="column1"><p>Drawing 1</p>
+						<button type="button" id="button1">Click Here to View</button>
 						<img class="icon">
 						
 					</a>	
 				</div>
-				<div class="column" id="column2"><a href="image2.html"><p>Drawing 2</p>
-					<a href="image2.html">
+				<div class="column" id="column2"><p>Drawing 2</p>
+						<button type="button" id="button2">Click Here to View</button>
 						<img class="icon">
-						
 					</a>
 				</div>
-				<div class="column" id="column3"><a href="image3.html"><p>Drawing 3</p>
-					<a href="image3.html">
+				<div class="column" id="column3"><p>Drawing 3</p>
+						<button type="button" id="button3">Click Here to View</button>
 						<img class="icon">
-					
 					</a>
 			</div>
 				</div>
 			</div>
+
 
 
 
@@ -130,6 +129,45 @@
 
 		<h4>This project is Berlin themed and focuses on the daily aspects of life that I miss most about the city. I hope you enjoy!</h3>
 
+			<script>
+
+				let button1 = document.getElementById('button1');
+				let button2 = document.getElementById('button2');
+				let button3 = document.getElementById('button3');
+				
+
+
+				function imageOne(){
+					window.open("Benzi_Edelson_Drawing_Final.html","_self");
+				}
+
+				function imageTwo(){
+					window.open("yuh.html","_self");
+				}
+
+				function imageThree(){
+					window.open("image3.html","_self");
+				}
+
+				button1.addEventListener("click", imageOne);
+				button2.addEventListener("click", imageTwo);
+				button3.addEventListener("click", imageThree);
+
+
+
+
+
+
+
+			</script>
+<!-- 			<form id="dropdownMenu">
+				<select class="options" name="select-drawing" onchange="location =this.value;">
+					<option value="">Select Image</option>
+					<option value="Benzi_Edelson_Drawing_Final.html">Drawing 1</a>
+					<option value="yuh.html">Drawing 2</a>
+					<option value="image3.html">Drawing 3</a>
+				</select>
+			</form> -->
 
 
 	
