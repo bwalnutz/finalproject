@@ -1,0 +1,53 @@
+  body{
+        background-image: url("trainstation.jpg");
+        overflow: none;
+        position:fixed;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+      }
+
+      #railImage{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        
+      }
+
+
+
+      @keyframes sbahnAnimation {
+        0% {transform: translate(1370px, -400px); width: 50px; opacity: .2;}
+        20% {transform: translate(1402px, -900px); width: 100px; opacity: .5;}
+        100% {transform: translate(200px, -100px); width: 200px; opacity: 1;}
+      }
+
+      .sbahnAnimate {
+        animation-name: sbahnAnimation;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+        animation-direction: alternate;
+        animation-iteration-count: 1;
+      }
+
+      #sbahn{
+        width: width: 50px;
+        height: auto;
+        position: fixed;
+      }
+
+/*      @keyframes ubahnAnimation {
+        0% {transform: translate(200px, -100px); width: 300px; opacity: 0;}
+        20% {transform: translate(1200px, -800px); width: 150px; opacity: .2 ;}
+        100% {transform: translate(0px, -700px); width: 100px; opacity: 1;}
+      }*/
+
+/*      .ubahnAnimate {
+        animation-name: ubahnAnimation;
+        animation-duration: 10s;
+        animation-fill-mode: forwards;
+        animation-direction: alternate;
+        animation-iteration-count: 1;
+      }*/
